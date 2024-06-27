@@ -3,73 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arduino Workshops</title>
+    <title>Talleres de Arduino</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="logo">Arduino Workshops</div>
-        <nav>
-            <ul>
-                <li><a href="#about">Sobre Nosotros</a></li>
-                <li><a href="#services">Servicios</a></li>
-                <li><a href="#schedule">Cronograma</a></li>
-                <li><a href="#contact">Contacto</a></li>
-            </ul>
-            <button class="btn-login">Iniciar Sesión</button>
-            <button class="btn-signup">Registrarse</button>
-        </nav>
+        <div class="logo">
+            <img src="logo.png" alt="Logo Arduino">
+            <h1>Talleres de Arduino</h1>
+        </div>
     </header>
     <main>
         <section class="hero">
-            <h1>Aprende y Construye con Arduino</h1>
-            <p>Ofrecemos talleres prácticos para entusiastas de todos los niveles.</p>
-            <button class="btn-cta">Empieza Ahora</button>
+            <h2>¡Aprende Arduino de manera divertida y práctica!</h2>
+            <p>Inscríbete en nuestros talleres y construye proyectos increíbles.</p>
+            <a href="#talleres" class="btn">Ver Talleres</a>
         </section>
-        <section id="about">
-            <h2>Sobre Nosotros</h2>
-            <p>Nuestro proyecto nace con el propósito de no solo enseñar el uso de Arduino, sino también de brindar una experiencia emocionante e innovadora, especialmente en áreas rurales donde este tipo de oportunidades son escasas.</p>
-        </section>
-        <section id="services">
+        <section id="talleres">
             <h2>Nuestros Talleres</h2>
-            <ul>
-                <li>Talleres para Principiantes (2-3 meses, edades 10-14)</li>
-                <li>Talleres Intermedios (3-4 meses, edades 15-19)</li>
-                <li>Talleres Avanzados (4-6 meses, edades 17-25)</li>
-            </ul>
+            <div class="taller">
+                <h3>Novato: Carrito</h3>
+                <p>Construye y programa tu primer carrito robótico.</p>
+                <a href="#registro" class="btn">Inscribirse</a>
+            </div>
+            <div class="taller">
+                <h3>Intermedio: Dron</h3>
+                <p>Desarrolla un dron y aprende a controlarlo.</p>
+                <a href="#registro" class="btn">Inscribirse</a>
+            </div>
+            <div class="taller">
+                <h3>Avanzado: Avión</h3>
+                <p>Construye un avión y domina la programación avanzada.</p>
+                <a href="#registro" class="btn">Inscribirse</a>
+            </div>
         </section>
-        <section id="schedule">
-            <h2>Cronograma del Proyecto</h2>
-            <h3>Avión Controlado por Arduino (4 meses)</h3>
-            <ol>
-                <li><strong>Mes 1:</strong> Fundamentos del Proyecto</li>
-                <li><strong>Mes 2:</strong> Diseño y Modelado</li>
-                <li><strong>Mes 3:</strong> Ensamblado de Componentes y Programación del Arduino</li>
-                <li><strong>Mes 4:</strong> Prototipo y Presentación Final</li>
-            </ol>
-        </section>
-        <section id="contact">
-            <h2>Contacto</h2>
-            <form>
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Correo Electrónico:</label>
+        <section id="registro">
+            <h2>Formulario de Registro</h2>
+            <form action="submit_form.php" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
-                <label for="message">Mensaje:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Enviar</button>
+                <label for="taller">Selecciona Taller:</label>
+                <select id="taller" name="taller" required>
+                    <option value="novato">Novato: Carrito</option>
+                    <option value="intermedio">Intermedio: Dron</option>
+                    <option value="avanzado">Avanzado: Avión</option>
+                </select>
+                <button type="submit" class="btn">Registrarse</button>
             </form>
+        </section>
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Email: contacto@arduino-talleres.com</p>
+            <p>Teléfono: +34 123 456 789</p>
         </section>
     </main>
     <footer>
-        <p>© 2024 Arduino Workshops. Todos los derechos reservados.</p>
-        <div class="footer-links">
-            <a href="#about">Sobre Nosotros</a>
-            <a href="#services">Servicios</a>
-            <a href="#schedule">Cronograma</a>
-            <a href="#contact">Contacto</a>
-        </div>
+        <p>&copy; 2024 Talleres de Arduino. Todos los derechos reservados.</p>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
