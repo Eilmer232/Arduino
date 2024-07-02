@@ -1,23 +1,88 @@
-/* Success Message Styles */
-.success-message {
-    text-align: center;
-    margin-top: 100px;
-    padding: 20px;
+/* styles.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-.success-message h1 {
-    font-size: 36px;
+header {
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    vertical-align: middle;
+}
+
+.logo h1 {
+    margin: 0;
+    padding-left: 10px;
+    vertical-align: middle;
+    font-size: 24px;
     color: #58c13c;
 }
 
-.success-message p {
-    font-size: 18px;
-    margin: 20px 0;
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
-.success-message .btn {
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #58c13c;
+}
+
+.hero {
     background-color: #58c13c;
     color: white;
+    padding: 100px 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin: 0 0 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 0 0 30px;
+}
+
+.btn {
+    background-color: #fff;
+    color: #58c13c;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -25,6 +90,151 @@
     font-weight: bold;
 }
 
-.success-message .btn:hover {
+.btn:hover {
+    background-color: #f4f4f4;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.talleres-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.taller {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 30%;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.taller:hover {
+    transform: scale(1.05);
+}
+
+.taller img {
+    width: 100px;
+    margin-right: 20px;
+}
+
+.taller-info h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #58c13c;
+}
+
+.taller-info p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.registro-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input, select, button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #58c13c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
     background-color: #45a029;
+}
+
+.contacto-section {
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .taller {
+        max-width: 45%;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .taller {
+        max-width: 100%;
+    }
+
+    .hero {
+        padding: 40px 20px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
 }
