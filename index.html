@@ -2,14 +2,17 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Talleres de Arduino</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Participa en nuestros talleres de Arduino y aprende a construir proyectos increíbles.">
+    <meta name="keywords" content="Arduino, Talleres, Programación, Robótica">
+    <meta name="author" content="Talleres de Arduino">
 </head>
 <body>
     <header>
-        <nav>
+        <nav role="navigation">
             <div class="logo">
                 <img src="logo.png" alt="Logo Arduino">
                 <h1>Talleres de Arduino</h1>
@@ -23,12 +26,12 @@
         </nav>
     </header>
     <main>
-        <section id="inicio" class="hero">
+        <section id="inicio" class="hero" role="banner">
             <h2>¡Aprende Arduino de manera divertida y práctica!</h2>
             <p>Inscríbete en nuestros talleres y construye proyectos increíbles.</p>
             <a href="#talleres" class="btn">Ver Talleres</a>
         </section>
-        <section id="talleres" class="talleres-section">
+        <section id="talleres" class="talleres-section" role="region">
             <h2>Nuestros Talleres</h2>
             <div class="taller">
                 <img src="carrito.png" alt="Carrito">
@@ -55,7 +58,7 @@
                 </div>
             </div>
         </section>
-        <section id="registro" class="registro-section">
+        <section id="registro" class="registro-section" role="form">
             <h2>Formulario de Registro</h2>
             <form action="submit_form.php" method="POST">
                 <label for="nombre">Nombre:</label>
@@ -71,14 +74,15 @@
                 <button type="submit" class="btn">Registrarse</button>
             </form>
         </section>
-        <section id="contacto" class="contacto-section">
+        <section id="contacto" class="contacto-section" role="contentinfo">
             <h2>Contacto</h2>
             <p>Email: contacto@arduino-talleres.com</p>
-            <p>Teléfono: +34 123 456 789</p>
+            <p>Teléfono: +51 931713928</p>
         </section>
     </main>
-    <footer>
+    <footer role="contentinfo">
         <p>&copy; 2024 Talleres de Arduino. Todos los derechos reservados.</p>
     </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>
