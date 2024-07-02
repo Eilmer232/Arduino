@@ -189,3 +189,52 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .taller {
+        max-width: 45%;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .taller {
+        max-width: 100%;
+    }
+
+    .hero {
+        padding: 40px 20px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+}
