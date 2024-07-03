@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (!emailPattern.test(email)) {
             alert('Por favor, ingrese un email válido.');
         } else {
-            alert('Mensaje enviado!');
+            alert('Registro exitoso!');
             form.submit();
         }
     });
