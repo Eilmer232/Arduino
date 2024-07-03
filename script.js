@@ -45,3 +45,9 @@ window.onclick = function(event) {
 }
 
 closeBtn.onclick = closeModal;
+
+// Toggle menu
+function toggleMenu() {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('active');
+}
