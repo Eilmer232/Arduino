@@ -21,6 +21,8 @@
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#talleres">Talleres</a></li>
                 <li><a href="#registro">Registro</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#acerca">Acerca de Nosotros</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
@@ -38,7 +40,7 @@
                 <div class="taller-info">
                     <h3>Novato: Carrito</h3>
                     <p>Construye y programa tu primer carrito robótico.</p>
-                    <a href="#registro" class="btn">Inscribirse</a>
+                    <a href="#registro" class="btn" onclick="openModal('novato')">Inscribirse</a>
                 </div>
             </div>
             <div class="taller">
@@ -46,7 +48,7 @@
                 <div class="taller-info">
                     <h3>Intermedio: Dron</h3>
                     <p>Desarrolla un dron y aprende a controlarlo.</p>
-                    <a href="#registro" class="btn">Inscribirse</a>
+                    <a href="#registro" class="btn" onclick="openModal('intermedio')">Inscribirse</a>
                 </div>
             </div>
             <div class="taller">
@@ -54,9 +56,18 @@
                 <div class="taller-info">
                     <h3>Avanzado: Avión</h3>
                     <p>Construye un avión y domina la programación avanzada.</p>
-                    <a href="#registro" class="btn">Inscribirse</a>
+                    <a href="#registro" class="btn" onclick="openModal('avanzado')">Inscribirse</a>
                 </div>
             </div>
+        </section>
+        <section id="testimonios" class="testimonios-section">
+            <h2>Testimonios</h2>
+            <p>"Los talleres de Arduino fueron una experiencia increíble. Aprendí mucho y me divertí en el proceso." - Juan Pérez</p>
+            <p>"Recomiendo estos talleres a cualquier persona interesada en la robótica y programación." - María López</p>
+        </section>
+        <section id="acerca" class="acerca-section">
+            <h2>Acerca de Nosotros</h2>
+            <p>Somos un equipo apasionado por la tecnología y la educación. Nuestro objetivo es enseñar a las personas cómo crear proyectos increíbles utilizando Arduino.</p>
         </section>
         <section id="registro" class="registro-section" role="form">
             <h2>Formulario de Registro</h2>
@@ -83,6 +94,23 @@
     <footer role="contentinfo">
         <p>&copy; 2024 Talleres de Arduino. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- Modal Structure -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Formulario de Registro</h2>
+            <form id="registro-form" action="submit_form.php" method="POST">
+                <input type="hidden" id="taller-type" name="taller">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit" class="btn">Registrarse</button>
+            </form>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
