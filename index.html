@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <nav role="navigation">
+        <nav role="navigation" aria-label="Main Navigation">
             <div class="logo">
                 <img src="https://support.arduino.cc/hc/article_attachments/12416033021852" alt="Logo Arduino">
                 <h1>Talleres de Arduino</h1>
@@ -31,10 +31,10 @@
             <p>Inscríbete en nuestros talleres y construye proyectos increíbles.</p>
             <a href="#talleres" class="btn">Ver Talleres</a>
         </section>
-        <section id="talleres" class="talleres-section" role="region">
-            <h2>Nuestros Talleres</h2>
+        <section id="talleres" class="talleres-section" role="region" aria-labelledby="talleres-heading">
+            <h2 id="talleres-heading">Nuestros Talleres</h2>
             <div class="taller">
-                <img src="https://i.ytimg.com/vi/hqNz4wcLMy8/maxresdefault.jpg" alt="Carrito">
+                <img src="https://i.ytimg.com/vi/hqNz4wcLMy8/maxresdefault.jpg" alt="Carrito robótico">
                 <div class="taller-info">
                     <h3>Novato: Carrito</h3>
                     <p>Construye y programa tu primer carrito robótico.</p>
@@ -42,7 +42,7 @@
                 </div>
             </div>
             <div class="taller">
-                <img src="https://i0.wp.com/descubrearduino.com/wp-content/uploads/2016/02/arduino-dron1.jpg" alt="Dron">
+                <img src="https://i0.wp.com/descubrearduino.com/wp-content/uploads/2016/02/arduino-dron1.jpg" alt="Dron de Arduino">
                 <div class="taller-info">
                     <h3>Intermedio: Dron</h3>
                     <p>Desarrolla un dron y aprende a controlarlo.</p>
@@ -50,7 +50,7 @@
                 </div>
             </div>
             <div class="taller">
-                <img src="https://europe1.discourse-cdn.com/arduino/optimized/4X/2/4/0/240e25315e68d07119e4084e19bc6c4842f356a7_2_666x500.jpeg" alt="Avión">
+                <img src="https://europe1.discourse-cdn.com/arduino/optimized/4X/2/4/0/240e25315e68d07119e4084e19bc6c4842f356a7_2_666x500.jpeg" alt="Avión de Arduino">
                 <div class="taller-info">
                     <h3>Avanzado: Avión</h3>
                     <p>Construye un avión y domina la programación avanzada.</p>
@@ -58,8 +58,8 @@
                 </div>
             </div>
         </section>
-        <section id="registro" class="registro-section" role="form">
-            <h2>Formulario de Registro</h2>
+        <section id="registro" class="registro-section" role="form" aria-labelledby="registro-heading">
+            <h2 id="registro-heading">Formulario de Registro</h2>
             <form action="submit_form.php" method="POST">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
@@ -74,8 +74,8 @@
                 <button type="submit" class="btn">Registrarse</button>
             </form>
         </section>
-        <section id="contacto" class="contacto-section" role="contentinfo">
-            <h2>Contacto</h2>
+        <section id="contacto" class="contacto-section" role="contentinfo" aria-labelledby="contacto-heading">
+            <h2 id="contacto-heading">Contacto</h2>
             <p>Email: 2023102474@ucss.pe</p>
             <p>Teléfono: +51 931713928</p>
         </section>
@@ -83,6 +83,6 @@
     <footer role="contentinfo">
         <p>&copy; 2024 Talleres de Arduino. Todos los derechos reservados.</p>
     </footer>
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
