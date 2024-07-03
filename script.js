@@ -23,3 +23,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// Modal functionality
+const modal = document.getElementById('modal');
+const closeBtn = document.querySelector('.close-btn');
+const tallerTypeInput = document.getElementById('taller-type');
+
+function openModal(taller) {
+    tallerTypeInput.value = taller;
+    modal.style.display = 'block';
+}
+
+function closeModal() {
+    modal.style.display = 'none';
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        closeModal();
+    }
+}
+
+closeBtn.onclick = closeModal;
