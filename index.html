@@ -2,193 +2,87 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Talleres de Arduino</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            padding-top: 70px;
-        }
-        .navbar {
-            background-color: #4CAF50;
-        }
-        .navbar-brand, .nav-link {
-            color: white !important;
-        }
-        .workshop-card {
-            margin-bottom: 20px;
-            transition: transform 0.3s;
-        }
-        .workshop-card:hover {
-            transform: scale(1.05);
-        }
-        .register-form {
-            margin-top: 30px;
-        }
-        footer {
-            background-color: #f1f1f1;
-            padding: 20px;
-            text-align: center;
-            margin-top: 30px;
-        }
-        #scrollTopBtn {
-            display: none;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 99;
-            font-size: 18px;
-            border: none;
-            outline: none;
-            background-color: #4CAF50;
-            color: white;
-            cursor: pointer;
-            padding: 15px;
-            border-radius: 4px;
-        }
-        #scrollTopBtn:hover {
-            background-color: #555;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Participa en nuestros talleres de Arduino y aprende a construir proyectos increíbles.">
+    <meta name="keywords" content="Arduino, Talleres, Programación, Robótica">
+    <meta name="author" content="Talleres de Arduino">
 </head>
 <body>
-
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <a class="navbar-brand" href="#">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Arduino_Logo.svg" width="30" height="30" alt="Arduino Logo">
-            Talleres de Arduino
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#home">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#workshops">Talleres</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#register">Registro</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contacto</a>
-                </li>
+    <header>
+        <nav role="navigation" aria-label="main navigation">
+            <div class="logo">
+                <img src="https://support.arduino.cc/hc/article_attachments/12416033021852" alt="Logo Arduino">
+                <h1>Talleres de Arduino</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#talleres">Talleres</a></li>
+                <li><a href="#registro">Registro</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
-        </div>
-    </nav>
-
-    <div id="home" class="container">
-        <div class="jumbotron text-center">
-            <h1>Bienvenidos a los Talleres de Arduino</h1>
-            <p>¡Inscríbete en nuestros talleres y construye proyectos increíbles!</p>
-            <a href="#workshops" class="btn btn-success">Ver Talleres</a>
-        </div>
-    </div>
-
-    <div id="workshops" class="container">
-        <h2 class="text-center">Nuestros Talleres</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card workshop-card">
-                    <img class="card-img-top" src="https://i.imgur.com/O7gN1iH.jpg" alt="Taller de Carrito">
-                    <div class="card-body">
-                        <h5 class="card-title">Novato: Carrito</h5>
-                        <p class="card-text">Construye y programa tu primer carrito robótico.</p>
-                        <a href="#register" class="btn btn-success">Inscribirse</a>
-                    </div>
+        </nav>
+    </header>
+    <main>
+        <section id="inicio" class="hero" role="banner">
+            <h2>¡Aprende Arduino de manera divertida y práctica!</h2>
+            <p>Inscríbete en nuestros talleres y construye proyectos increíbles.</p>
+            <a href="#talleres" class="btn">Ver Talleres</a>
+        </section>
+        <section id="talleres" class="talleres-section" role="region">
+            <h2>Nuestros Talleres</h2>
+            <div class="taller">
+                <img src="https://i.ytimg.com/vi/hqNz4wcLMy8/maxresdefault.jpg" alt="Carrito">
+                <div class="taller-info">
+                    <h3>Novato: Carrito</h3>
+                    <p>Construye y programa tu primer carrito robótico.</p>
+                    <a href="#registro" class="btn">Inscribirse</a>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card workshop-card">
-                    <img class="card-img-top" src="https://i.imgur.com/2dHcpZp.jpg" alt="Taller de Dron">
-                    <div class="card-body">
-                        <h5 class="card-title">Intermedio: Dron</h5>
-                        <p class="card-text">Desarrolla un dron y aprende a controlarlo.</p>
-                        <a href="#register" class="btn btn-success">Inscribirse</a>
-                    </div>
+            <div class="taller">
+                <img src="https://i0.wp.com/descubrearduino.com/wp-content/uploads/2016/02/arduino-dron1.jpg" alt="Dron">
+                <div class="taller-info">
+                    <h3>Intermedio: Dron</h3>
+                    <p>Desarrolla un dron y aprende a controlarlo.</p>
+                    <a href="#registro" class="btn">Inscribirse</a>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card workshop-card">
-                    <img class="card-img-top" src="https://i.imgur.com/kU1qXTT.jpg" alt="Taller de Avión">
-                    <div class="card-body">
-                        <h5 class="card-title">Avanzado: Avión</h5>
-                        <p class="card-text">Construye un avión y domina la programación avanzada.</p>
-                        <a href="#register" class="btn btn-success">Inscribirse</a>
-                    </div>
+            <div class="taller">
+                <img src="https://europe1.discourse-cdn.com/arduino/optimized/4X/2/4/0/240e25315e68d07119e4084e19bc6c4842f356a7_2_666x500.jpeg" alt="Avión">
+                <div class="taller-info">
+                    <h3>Avanzado: Avión</h3>
+                    <p>Construye un avión y domina la programación avanzada.</p>
+                    <a href="#registro" class="btn">Inscribirse</a>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <div id="register" class="container register-form">
-        <h2 class="text-center">Formulario de Registro</h2>
-        <form>
-            <div class="form-group">
-                <label for="name">Nombre:</label>
-                <input type="text" class="form-control" id="name" required>
-            </div>
-            <div class="form-group">
+        </section>
+        <section id="registro" class="registro-section" role="form">
+            <h2>Formulario de Registro</h2>
+            <form action="submit_form.php" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
                 <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" required>
-            </div>
-            <div class="form-group">
-                <label for="workshop">Selecciona Taller:</label>
-                <select class="form-control" id="workshop" required>
-                    <option>Novato: Carrito</option>
-                    <option>Intermedio: Dron</option>
-                    <option>Avanzado: Avión</option>
+                <input type="email" id="email" name="email" required>
+                <label for="taller">Selecciona Taller:</label>
+                <select id="taller" name="taller" required>
+                    <option value="novato">Novato: Carrito</option>
+                    <option value="intermedio">Intermedio: Dron</option>
+                    <option value="avanzado">Avanzado: Avión</option>
                 </select>
-            </div>
-            <button type="submit" class="btn btn-success">Registrarse</button>
-        </form>
-    </div>
-
-    <div id="contact" class="container">
-        <h2 class="text-center">Contacto</h2>
-        <p class="text-center">Email: 2023102474@ucss.pe</p>
-    </div>
-
-    <footer>
-        <p>© 2024 Talleres de Arduino. Todos los derechos reservados.</p>
+                <button type="submit" class="btn">Registrarse</button>
+            </form>
+        </section>
+        <section id="contacto" class="contacto-section" role="contentinfo">
+            <h2>Contacto</h2>
+            <p>Email: 2023102474@ucss.pe</p>
+            <p>Teléfono: +51 931713928</p>
+        </section>
+    </main>
+    <footer role="contentinfo">
+        <p>&copy; 2024 Talleres de Arduino. Todos los derechos reservados.</p>
     </footer>
-
-    <button id="scrollTopBtn" title="Go to top">Top</button>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            // Smooth scrolling
-            $('a[href*="#"]').on('click', function(event) {
-                event.preventDefault();
-                $('html, body').animate({
-                    scrollTop: $($.attr(this, 'href')).offset().top - 70
-                }, 500);
-            });
-
-            // Scroll to top button
-            var mybutton = document.getElementById("scrollTopBtn");
-
-            window.onscroll = function() {scrollFunction()};
-
-            function scrollFunction() {
-                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                    mybutton.style.display = "block";
-                } else {
-                    mybutton.style.display = "none";
-                }
-            }
-
-            mybutton.addEventListener("click", function() {
-                $('html, body').animate({
-                    scrollTop: 0
-                }, 500);
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
